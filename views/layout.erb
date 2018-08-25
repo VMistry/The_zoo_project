@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+  </head>
+  <body>
+    <!-- partials folder will be use for all website-->
+    <%= erb(:'partials/navigation', :layout => false) %>
+    <!-- The yeild function is used to connect to the post_controller to retrieve what the page should look like -->
+    <!-- The controller would then access the post_controller and retreive where to find the layout -->
+    <!-- yield acts like a placeholder for the filler text -->
+    <%= yield %>
+  </body>
+</html>
