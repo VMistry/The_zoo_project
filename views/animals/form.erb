@@ -1,32 +1,32 @@
 <form action="/<%= @zoo.id %>" method="post">
   <!-- Allow the user to insert the name -->
   <div>
-    <label>Animal_names</label>
-    <input type="text" name="animal_names" placeholder="Enter a title" value="<%= @zoo.animal_names %>">
+    <label>Animal_names: </label>
+    <input type="text" name="name" placeholder="Enter a title" value="<%= @zoo.name %>">
   </div>
   <!-- Allow the user to insert the enclosure number -->
   <div>
-    <label>Animal_enclosure_number</label>
-    <input type="text" name="enclosure" placeholder="Enter a title" value="<%= @zoo.enclosure %>">
+    <label>Animal_enclosure_number: </label>
+    <input type="text" name="enclosure_no" placeholder="Enter a title" value="<%= @zoo.enclosure_no %>">
   </div>
   <!-- Allow the user to insert the age -->
   <div>
-    <label>Animal_age</label>
+    <label>Animal_age: </label>
     <input type="text" name="age" placeholder="Enter a title" value="<%= @zoo.age %>">
   </div>
   <!-- Allow the user to insert the age -->
   <div>
-    <label>Animal_species</label>
+    <label>Animal_species: </label>
     <input type="text" name="species" placeholder="Enter a title" value="<%= @zoo.species %>">
   </div>
   <!-- Allow the user to insert the type -->
   <div>
-    <label>Animal_class</label>
+    <label>Animal_class: </label>
     <input type="text" name="class" placeholder="Enter a title" value="<%= @zoo.class %>">
   </div>
   <!-- Allow the user to insert the a desciption -->
   <div>
-    <label>animal_description</label>
+    <label>animal_description: </label>
     <textarea type="text" name="animal_description" placeholder="Body of text"><%= @zoo.animal_description %></textarea>
   </div>
     <!-- Allow the user to submit the results -->
