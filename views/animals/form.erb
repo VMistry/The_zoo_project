@@ -1,4 +1,4 @@
-<form action="/<%= @zoo.id %>" method="post">
+<form id="divform" action="/<%= @zoo.id %>" method="post">
   <!-- Allow the user to insert the name -->
   <div>
     <label>Animal_names: </label>
@@ -26,12 +26,12 @@
   </div>
   <!-- Allow the user to insert the a desciption -->
   <div>
-    <label>animal_description: </label>
+    <label>Animal_description: </label>
     <textarea type="text" name="animal_description" placeholder="Body of text"><%= @zoo.animal_description %></textarea>
   </div>
     <!-- Allow the user to submit the results -->
   <div>
-    <input type="submit" value="Save Post">
+    <input class="submitBTN" type="submit" value="Save Post">
   </div>
   <!-- Ruby code to check if the id is empty -->
   <!-- Use the function to put the data in to array -->

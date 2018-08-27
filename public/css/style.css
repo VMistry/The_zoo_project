@@ -1,0 +1,123 @@
+body{
+  background-color: black;
+  color:white;
+}
+ul {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+h1{
+  margin auto;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+input[type=text], textarea{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label{
+    width: 80%;
+    padding: 12px 20px;
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.detailDiv{
+  width:300px;
+  border:solid 1px white;
+  font-size: 20px;
+  text-align: center;
+  height: 600px;
+  background-color: grey;
+  margin:auto;
+}
+
+.infoButton{
+  width:80%;
+  height:20px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.infoButton:hover {
+    background-color: green;
+}
+
+.submitBTN {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.zoo_animal{
+  border:solid 1px black;
+  float:left;
+  width:400px;
+  background-color: grey;
+}
+
+#navStart{
+  margin-left: 30px;
+}
+
+#divform{
+  text-align:center;
+  background-color: grey;
+  width: 500px;
+  height: 650px;
+  margin:auto;
+}
+#heading{
+  background-color: grey;
+  width:100%;
+  border-radius: 50px;
+  text-align: center;
+  height:120px;
+  margin-bottom:10px;
+}
+
+#zoo_container{
+  width:1206px;
+  text-align: center;
+  height:300px;
+  margin:auto;
+}
