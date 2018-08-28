@@ -5,7 +5,7 @@ class Animals
     # connect to the post grade database and grabs all the data to the website
     connection = PG.connect(dbname: "animals")
   end
-
+  # Save the updated or new animal data by sending it to the database.
   def save
     conn = Animals.open_connection
     if(!self.id)
@@ -15,7 +15,7 @@ class Animals
     end
     conn.exec(sql)
   end
-
+  # Show all the animals within the database.
   def self.all
     # Create an open_connection
     conn = self.open_connection
@@ -28,7 +28,7 @@ class Animals
     end
     animals
   end
-
+  # Used to find and dsiplay the animal the user would like to look at.
   # find on part of the data
   def self.find(id)
     conn = self.open_connection
@@ -36,13 +36,14 @@ class Animals
     animal_result = conn.exec(sql)
     animal = self.hydrate(animal_result[0])
   end
-
+  # This deletes a row from the table.
   def self.destroy(id)
     conn = self.open_connection
     sql = "DELETE FROM animals WHERE id = #{id}"
     conn.exec(sql)
   end
 
+  # THis will update the table constantly.
   def self.hydrate(animal_data)
     animal = Animals.new
     animal.id = animal_data['id']

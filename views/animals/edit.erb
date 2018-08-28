@@ -1,6 +1,14 @@
-  <!-- Heading -->
-  <h1>Editting chosen animal</h1>
-</div>
-<!-- Will bring out a form with all information about the animal -->
-<!-- It will allow the animal to be edited if needed -->
-<%= erb(:"animals/form", :layout => false) %>
+      <!-- Heading -->
+      <h1>Editting chosen animal</h1>
+    </div>
+    <!-- Will bring out a form with all information about the animal -->
+    <!-- It will allow the animal to be edited if needed -->
+    <%= erb(:"animals/form", :layout => false) %>
+    <section id="login" class="saveArea">
+      <div id="popupForm" class="model saveContents">
+        <h4>Save successful</h4>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript" src="javascript/javascript.js"></script>
+</html>

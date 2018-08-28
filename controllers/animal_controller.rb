@@ -6,26 +6,25 @@ class AnimalController < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-
+  # Main page
   get "/" do
     @title = "The Zoo"
     @zoo = Animals.all
     erb :'animals/index'
   end
-
+  # To insert a new animal
   get "/new" do
     @title = "New Animal"
     @zoo = Animals.new
     erb :'animals/new_animal'
   end
-
-
+  # To open a page for an animal the user would like to see.
   get "/:id" do
     id = params[:id].to_i
     @zoo = Animals.find(id)
     erb :'animals/show'
   end
-
+  # To edit an existing animal
   get "/:id/edit" do
     @title = "Edit"
     #Gets the id on the selected page
@@ -34,7 +33,7 @@ class AnimalController < Sinatra::Base
     @zoo = Animals.find(id)
     erb :'animals/edit'
   end
-
+  # Save changes to the database
   post "/" do
     animals = Animals.new
     animals.name = params[:name]
@@ -46,7 +45,7 @@ class AnimalController < Sinatra::Base
     animals.save
     redirect "/"
   end
-
+  # Used to udpate an existing animal
   put "/:id" do
     id = params[:id].to_i
     animal = Animals.find(id)
@@ -59,11 +58,7 @@ class AnimalController < Sinatra::Base
     animal.save
     redirect "/"
   end
-
-  patch "/:id" do
-    "Update #{:id}"
-  end
-
+  # To delete an existing animal.
   delete "/:id" do
     id = params[:id].to_i
     Animals.destroy(id)
